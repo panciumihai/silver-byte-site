@@ -1,0 +1,15 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+
+  .logo-container {
+    height: 50px;
+    width: 50px;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+  }
+}
