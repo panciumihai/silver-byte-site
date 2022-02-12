@@ -37,7 +37,6 @@ const Header = () => {
         <div className='logo-container'>
           <img src={Logo} alt='silver-byte-logo' />
         </div>
-        <span></span>
         <Navigation navItems={navItems} />
         <BurgerMenu navItems={navItems} />
       </div>
