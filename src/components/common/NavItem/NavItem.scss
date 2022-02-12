@@ -1,0 +1,31 @@
+@import '../../../assets/scss/variables';
+
+.nav-item {
+  font-family: $heading-font;
+  position: relative;
+  padding: 20px 0px;
+  color: #c6c9d8;
+  font-size: $h6;
+  font-weight: 500;
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: $theme-color;
+    bottom: 0;
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+  &.active {
+    color: $theme-color;
+    &::after {
+      width: 100%;
+    }
+  }
+}

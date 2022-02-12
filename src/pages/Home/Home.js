@@ -1,5 +1,9 @@
 const Home = () => {
-  return <h1>I'm working</h1>;
+  return (
+    <>
+      <h1>Work in progress!</h1>
+    </>
+  );
 };
 
 export default Home;
