@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { FiChevronUp, FiX, FiMenu } from 'react-icons/fi';
+import NavItem from '../common/NavItem/NavItem';
 
-import './BurgherMenu.scss';
+import './BurgerMenu.scss';
 
 const Backdrop = (props) => {
   const { onClick } = props;
@@ -13,8 +14,8 @@ const Backdrop = (props) => {
   );
 };
 
-const BurgherMenu = (props) => {
-  const { navLinks } = props;
+const BurgerMenu = (props) => {
+  const { navItems } = props;
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -39,7 +40,11 @@ const BurgherMenu = (props) => {
                 <FiX />
               </div>
             </div>
-            {navLinks.map((navLink) => navLink)}
+            {navItems.map((item) => (
+              <NavItem key={item.to} to={item.to}>
+                {item.name}
+              </NavItem>
+            ))}
           </div>,
           document.getElementById('overlay-root')
         )}
@@ -47,4 +52,4 @@ const BurgherMenu = (props) => {
   );
 };
 
-export default BurgherMenu;
+export default BurgerMenu;

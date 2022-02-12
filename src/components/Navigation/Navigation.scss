@@ -1,0 +1,16 @@
+@import '../../assets/scss/breakpoints';
+
+.main-nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style-type: none;
+
+  @include media('<=tablet') {
+    display: none;
+  }
+
+  .nav-item {
+    margin-left: 30px;
+  }
+}
